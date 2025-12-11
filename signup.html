@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Indian_Railways_logo.png" type="image/x-icon">
+</head>
+<body>
+        <nav class="nav">
+            <div class="logo">
+              <a href="index.html"><img src="Indian_Railways_logo.png" alt="">Indian Railway's</a> 
+            </div>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <ul class="list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About Us</a></li>
+                <li><a href="signup.html">Trains Info.</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="signup.html">SignUp</a></li>
+            </ul>
+        </nav>
+  <form id="signupfrom">
+    <div class="form-box">
+    <h2>Create Account</h2>
+    <label>Name</label>
+    <input type="text" id="username" placeholder="Enter your Name" required>
+    <label>E-Mail ID</label>
+    <input type="email" id="uemail" placeholder="Enter your E-Mail ID" required>
+    <label>Password</label>
+    <input type="password" id="upass" placeholder="Enter your Password" required>
+    <label>Confirm Password</label>
+    <input type="password" id="ucpass" placeholder="Enter your Confirm Password" required>
+    <input class="s1" type="submit">
+    <b>Already SignIN ?</b>
+    <a href="signin.html">Sign IN</a>
+
+</div>
+</form>
+
+<script>
+    document.getElementById("signupfrom").addEventListener("submit",function(event)
+    {
+        event.preventDefault();
+        let username=document.getElementById("username").value;
+        let uemail=document.getElementById("uemail").value;
+        let upass=document.getElementById("upass").value;
+        let ucpass=document.getElementById("ucpass").value;
+
+        console.log(username,uemail,upass,ucpass);
+        if(upass===ucpass)
+    {
+        localStorage.setItem("username",username);
+        localStorage.setItem("uemail",uemail);
+        localStorage.setItem("upass",upass);
+        alert("Register Successfully Done !!");
+        window.location.href="signin.html";
+    }
+     else
+    {
+        alert("Password and confirm Password doe's not match. Try again");
+    }
+
+    })
+</script>
+<footer>
+    <p>&#169;2025 Indian Railway. All Rights Reserved.</p>
+</footer>
+</body>
+</html>

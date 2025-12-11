@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Indian_Railways_logo.png" type="image/x-icon">
+    <title>Sign In</title>
+</head>
+<body>
+        <nav class="nav">
+            <div class="logo">
+                <a href="index.html"><img src="Indian_Railways_logo.png" alt=""> Indian Railway's</a>
+            </div>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <ul class="list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About Us</a></li>
+                <li><a href="signup.html">Trains Info.</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="signup.html">SignUp</a></li>
+            </ul>
+        </nav>
+        <form id="signinfrom">
+        <section class="form-section">
+            <div class="form-box">
+            <h2>Sign In</h2>
+            <label>E-Mail ID</label>
+            <input type="Email" id="uemail" placeholder="Enter your E-Mail ID" required>
+            <label>Password</label>
+            <input type="password" id="upass" placeholder="Enter your Password" required>
+            <input class="s1" type="submit" value="Submit">
+            <a href="index.html"><input class="s1" type="button" value="Cancel"></a>
+            </div>
+        </section>
+        </form>
+        
+    <script>
+        document.getElementById("signinfrom").addEventListener("submit",function(event)
+        {
+            event.preventDefault();
+            let uemail=document.getElementById("uemail").value;
+            let upass=document.getElementById("upass").value;
+            console.log(uemail,upass);
+
+            let storedemail=localStorage.getItem("uemail");
+            let storedpassword=localStorage.getItem("upass");
+             console.log(storedemail,storedpassword);
+             
+             if(uemail===storedemail && upass==storedpassword)
+             {
+                alert("Login Successfully !!");
+                window.location.href="dashboard.html";
+             }
+             else
+             {
+                alert("Login Failed!! Please check E-mail of Password")
+             }
+            
+        }
+    )
+    </script>
+        <footer>
+                <p>&#169;2025 Indian Railway. All Rights Reserved.</p>
+        </footer>
+</body>
+</html>
