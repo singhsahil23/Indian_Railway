@@ -68,7 +68,7 @@ body
     transition: 0.3s;
 }
 
-/* Hamburger Menu Toggle */
+
 .menu-toggle {
     display: none;
 }
@@ -298,7 +298,7 @@ body
     opacity: 1;
 }
 
-/* Box Animation Delays */
+
 .box-1 {
     animation-delay: 0.1s;
 }
@@ -323,7 +323,7 @@ body
     animation-delay: 0.6s;
 }
 
-/* Animations */
+
 @keyframes fadeInDown {
     from {
         opacity: 0;
@@ -797,7 +797,7 @@ footer
     font-size: 20px;
 }
 
-/* Laptop/Desktop View - 1440px and above */
+
 @media (min-width: 769px) {
   .menu-icon {
     display: none !important;
@@ -820,7 +820,7 @@ footer
   }
 }
 
-/* Responsive Styles */
+
 @media (max-width: 1200px) {
   .nav {
     padding: 12px 30px;
@@ -862,7 +862,7 @@ footer
   }
 }
 
-/* Laptop View - 1440px */
+
 @media (min-width: 1201px) and (max-width: 1600px) {
   .nav {
     padding: 15px 60px;
@@ -1537,7 +1537,7 @@ footer
   background-color:rgba(255, 255, 255, 0.4);
 }
 
-/* Dashboard Styles */
+
 .dashboard-welcome {
     padding: 60px 40px 40px 40px;
     text-align: center;
